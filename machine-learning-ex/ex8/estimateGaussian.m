@@ -22,8 +22,10 @@ sigma2 = zeros(n, 1);
 %
 
 
-
-
+mu = 1/m * sum(X,1)';
+for i = 1:n
+    sigma2(i) = 1/m* (X(:,i)-mu(i)*ones(m,1))'*(X(:,i)-mu(i)*ones(m,1));
+end
 
 
 
